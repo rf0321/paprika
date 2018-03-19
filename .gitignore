@@ -1,0 +1,6 @@
+# Ignore file for IDEs
+/.vscode
+# Ignore directories for project build
+target/
+# Ignore file for depenidencies log
+Cargo.lock
