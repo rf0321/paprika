@@ -6,7 +6,7 @@ use std::io::{Read, BufWriter};
 use std::fs::File;
 
 fn main(){
-    let html = read_source(String::from("/home/ryoya/paprika-browser/examples/index.html"));
+    let html = read_source(String::from("/home/username/paprika-browser/examples/index.html"));
     println!("{:?}", html::parse(html));    
 }
 fn read_source(filename: String) -> String {
