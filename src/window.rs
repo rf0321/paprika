@@ -1,7 +1,6 @@
 extern crate gtk;
 extern crate gdk;
 extern crate gio;
-extern crate reqwest;
 
 use gtk::{ WindowExt, WidgetExt, ContainerExt, GtkApplicationExt, };
 use gio::{ ApplicationExt, MenuExt, ActionMapExt, SimpleActionExt};
@@ -18,6 +17,7 @@ impl BrowserWindow{
     pub fn lanuch_window(&self){
         match gtk::Application::new("com.github.ItinoseSan.paprika", gio::APPLICATION_HANDLES_OPEN) {
          Ok(app) => {
+             println!("application launched successfully");
                 app.connect_activate(|app| {
                 let browser_window = gtk::ApplicationWindow::new(&app);
                 let scroll_bar = gtk::ScrolledWindow::new(None,None);
